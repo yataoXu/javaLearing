@@ -7,11 +7,11 @@ import java.util.function.Predicate;
 public class Java8Tester {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
-        /*
-        Predicate<Integer> predicate = n -> true
-    是一个参数传递到 Predicate 接口的 test 方法
-    如果存在则 test 方法返回 true
-         */
+
+        //Predicate<Integer> predicate = n -> true
+        //是一个参数传递到 Predicate 接口的 test 方法
+        //如果存在则 test 方法返回 true
+
         Predicate<Integer> predicate = n -> true;
         System.out.println("输出所有数据:");
 
