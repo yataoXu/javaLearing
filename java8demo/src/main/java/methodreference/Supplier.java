@@ -3,7 +3,7 @@ package methodreference;
 import java.util.Arrays;
 import java.util.List;
 
-@FunctionalInterface
+
 public interface Supplier<T> {
     T get();
 }
