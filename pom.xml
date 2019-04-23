@@ -30,6 +30,7 @@
         <module>spring-helloworld</module>
         <module>spring-ioc</module>
         <module>java8demo</module>
+        <module>servlet3</module>
     </modules>
 
     <dependencyManagement>
