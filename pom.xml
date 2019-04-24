@@ -31,6 +31,7 @@
         <module>spring-ioc</module>
         <module>java8demo</module>
         <module>servlet3</module>
+        <module>threaddemo</module>
     </modules>
 
     <dependencyManagement>
