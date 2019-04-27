@@ -6,9 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springhelloworld" />
         <module name="springioc" />
+        <module name="threaddemo" />
+        <module name="java8demo" />
+        <module name="spring-ioc" />
+        <module name="servlet3" />
+        <module name="springhelloworld" />
+        <module name="spring-helloworld" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="java8demo" target="1.8" />
+      <module name="javalearn" target="1.5" />
+      <module name="servlet3" target="1.5" />
+      <module name="spring-helloworld" target="1.5" />
+      <module name="spring-ioc" target="1.5" />
+      <module name="threaddemo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
   </component>
 </project>

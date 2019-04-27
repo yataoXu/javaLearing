@@ -10,4 +10,8 @@ target/*
 .idea/*
 *.iml
 .idea
-/laocaibao_webservice/*.iml
+/java8demo/*.iml
+/servlet3/*.iml
+/spring-helloworld/*.iml
+/spring-ioc/*.iml
+/threaddemo/*.iml
