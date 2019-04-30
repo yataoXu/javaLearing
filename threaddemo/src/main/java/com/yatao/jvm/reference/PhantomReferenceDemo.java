@@ -2,9 +2,11 @@ package com.yatao.jvm.reference;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;
-import java.lang.ref.WeakReference;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 虚引用必须和引用队列（ReferenceQueue)联合使用
+ */
 public class PhantomReferenceDemo {
     public static void main(String[] args) {
         Object o1 = new Object();
@@ -27,9 +29,8 @@ public class PhantomReferenceDemo {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         System.out.println(o1);
         System.out.println(phantomRef.get());
-        System.out.println(referenceQueue.poll().getClass().getName());
+        System.out.println(referenceQueue.poll().getClass().getName()+"被回收啦");
     }
 }
