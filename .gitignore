@@ -8,8 +8,10 @@ target
 target/*
 .idea
 .idea/*
+.idea/*
 *.iml
 .idea
+.idea/libraries/*
 /java8demo/*.iml
 /servlet3/*.iml
 /spring-helloworld/*.iml
