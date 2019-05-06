@@ -1,6 +1,8 @@
 package com.yatao.threads;
 
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * synchronized可以保证方法或者代码块在运行时，
  * 同一时刻只有一个方法可以进入到临界区，
@@ -14,11 +16,33 @@ package com.yatao.threads;
  * 同步方法块，锁是括号里面的对象
  *
  */
-public class SynchroziedTest {
+public class SynchroziedTest  implements Runnable {
+    private static int count;
 
+    public SynchroziedTest() {
+        count = 0;
+    }
+
+    public  void run() {
+        synchronized(this) {
+            for (int i = 0; i < 5; i++) {
+                try {
+                    System.out.println(Thread.currentThread().getName() + ":" + (count++));
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
 
     public static void main(String[] args) {
-        System.out.println("34223");
+        SynchroziedTest syncThread = new SynchroziedTest();
+        Thread thread1 = new Thread(new SynchroziedTest(), "SyncThread1");
+        Thread thread2 = new Thread(new SynchroziedTest(), "SyncThread2");
+        thread1.start();
+        thread2.start();
+
     }
 }
