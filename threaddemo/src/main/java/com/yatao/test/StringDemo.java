@@ -1,5 +1,7 @@
 package com.yatao.test;
 
+import java.util.HashMap;
+
 public class StringDemo {
     public static void main(String[] args) {
 
@@ -31,6 +33,13 @@ public class StringDemo {
         Integer int5 = new Integer(100);
         Integer int6 = 100;
         System.out.println(int5 == int6); //false
+
+        HashMap<String,String> map = new HashMap();
+        map.put("a","a");
+        map.put("a","a");
+        map.put("a","a");
+        map.put("a","a");
+        System.out.println(map.size());
 
 
     }
