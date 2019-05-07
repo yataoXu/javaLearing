@@ -1,6 +1,8 @@
 package com.yatao.test;
 
 import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
 
 public class StringDemo {
     public static void main(String[] args) {
@@ -33,14 +35,35 @@ public class StringDemo {
         Integer int5 = new Integer(100);
         Integer int6 = 100;
         System.out.println(int5 == int6); //false
-
+        System.out.println("================");
         HashMap<String,String> map = new HashMap();
+
         map.put("a","a");
-        map.put("a","a");
-        map.put("a","a");
-        map.put("a","a");
+        map.put("b","a");
+        map.put(null,"a");
+        map.put("a",null);
+        map.put(null,null);
+
+
+        for(Map.Entry<String,String> maps :map.entrySet()){
+            System.out.println(maps.getKey()+":"+maps.getValue());
+        }
+        System.out.println("================");
+        map.forEach((key,value)->{
+            System.out.println(key+":"+value);
+        });
+
         System.out.println(map.size());
 
 
+        Hashtable<String,String> mapTable = new Hashtable();
+
+        mapTable.put("a","a");
+        mapTable.put("a","b");
+        mapTable.put("a","c");
+
+        mapTable.forEach((key,value)->{
+            System.out.println(key+":"+value);
+        });
     }
 }
